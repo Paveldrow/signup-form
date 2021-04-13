@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Intro component with sign up form</title>
+</head>
+
+<body class="page-body">
+  <h1 class="visually-hidden">Sign up form</h1>
+  <section class="sign-up">
+    <div class="sign-up__wrapper sign-up__wrapper--text">
+      <h2 class="sign-up__title">Learn to code by watching others</h2>
+      <p class="sign-up__discription">See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.</p>
+    </div>
+    <div class="sign-up__wrapper">
+      <a class="button button--trial" href="#"> <span class="button--accent">Try it free 7 days </span>then $20/mo. thereafter</a>
+      <form class="form" action="post">
+        <input class="form__input" type="text" name="first-name" placeholder="First Name"><span class="visually-hidden" requred>First Name</span>
+        <input class="form__input" type="text" name="last-name" placeholder="Last Name"><span class="visually-hidden">Last Name</span>
+        <input class="form__input form__email" type="text" name="email" placeholder="Email Adress" requred pattern="[0-9]"><span class="visually-hidden">Email Address</span>
+        <input class="form__input" type="password" name="password" placeholder="Password" requred><span class="visually-hidden">Password</span>
+        <button class="button button--submit" type="submit">Claim your free trial</button>
+        <p class="form__text">By clicking the button, you are agreeing to our <span class="form__accent">Terms and Services</span></p>
+      </form>
+    </div>
+  </section>
+  <footer>
+  </footer>
+  <script src="script/main.js"></script>
+</body>
+
+</html>
