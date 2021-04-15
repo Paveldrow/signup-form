@@ -11,6 +11,7 @@ const REGEXMAIL = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
 const errorMessage = document.createElement('span');
 errorMessage.classList.add('invalid-message');
 
+
 // First Name validation
 const getValidationFirstName = () => {
   if (REGEXNAME.test(firstName.value)) {
@@ -64,9 +65,20 @@ const passwordValidation = () => {
   };
 };
 
+const removeErrorMessage = () => {
+  const errorElements = document.querySelectorAll('.invalid-message');
+  if (errorElements.length === 0) {
+    return;
+  } else {
+    errorElements.forEach(error => {
+      error.remove();
+    });
+  }
+}
+
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
-  errorMessage.remove();
+  removeErrorMessage();
   getValidationFirstName();
   getValidationLastName();
   EmailValidation();
