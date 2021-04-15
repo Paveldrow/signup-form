@@ -18,7 +18,7 @@ const getValidationFirstName = () => {
     firstName.classList.add('input--valid');
   } else {
     errorMessage.textContent = 'First Name cannot be empty';
-    const mess = firstName.after(errorMessage.cloneNode(true));
+    firstName.after(errorMessage.cloneNode(true));
 
     firstName.classList.add('input--invalid');
   };
